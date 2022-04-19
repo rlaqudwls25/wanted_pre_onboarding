@@ -15,9 +15,9 @@ const Toggle = () => {
       <ToggleContainer>
         <ButtonWrapper check={check}></ButtonWrapper>
         {ToggleName.map((item) => {
-          const { name } = item;
+          const { id, name } = item;
           return (
-            <Btn name={name} onClick={() => onChangeCheck(check)}>
+            <Btn key={id} name={name} onClick={() => onChangeCheck(check)}>
               {name}
             </Btn>
           );

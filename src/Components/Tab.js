@@ -12,10 +12,12 @@ const Tab = () => {
 
   return (
     <TabContainer>
-      {TabMenu.map((item) => {
+      {TabMenu.map((item, idx) => {
         return (
           <>
-            <TabList onClick={() => onChangeTab(item)}>{item}</TabList>
+            <TabList key={idx} onClick={() => onChangeTab(item)}>
+              {item}
+            </TabList>
           </>
         );
       })}
