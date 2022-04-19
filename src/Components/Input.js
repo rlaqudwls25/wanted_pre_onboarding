@@ -41,7 +41,7 @@ const Input = () => {
           <EmailInput
             type="email"
             placeholder="E-mail"
-            onBlur={checkEmail}
+            onChange={checkEmail}
             onKeyUp={enterKeyEvent}
           />
           {emailCheck ? <AiFillCheckCircle /> : <AiOutlineCheckCircle />}
