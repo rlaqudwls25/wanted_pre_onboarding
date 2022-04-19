@@ -20,6 +20,9 @@ const Input = () => {
       setCheck(false);
       setEmailCheck(false);
       setEmailMsg("invalid e-mail address.");
+      if (e.target.value === "") {
+        setEmailMsg("");
+      }
     }
   };
 
