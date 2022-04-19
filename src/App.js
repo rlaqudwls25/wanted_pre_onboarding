@@ -2,6 +2,7 @@ import Toggle from "./Components/Toggle";
 import Tab from "./Components/Tab";
 import Input from "./Components/Input";
 import Dropdown from "./Components/Dropdown";
+import Slider from "./Components/Slider";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Toggle />
       <Tab />
       <Input />
+      <Slider />
       <Dropdown />
     </>
   );
