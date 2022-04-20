@@ -87,6 +87,7 @@ Otherwise, set either `onChange` or `readOnly`.
 ```
 
 😵 **아직 구현하지 못한 부분**
+<br />
 컴포넌트 밖 영억을 mousedown 하였을 시 DropdownList가 닫히는 부분
 
 
