@@ -78,6 +78,7 @@ const LoginWrapper = styled.div`
 const EmailBox = styled.div`
   position: relative;
   ${mixin.flexSet("_", "_", "column")}
+  border-radius: 40px;
 
   svg {
     width: 20px;
@@ -85,7 +86,6 @@ const EmailBox = styled.div`
     position: absolute;
     right: 10px;
     bottom: 13px;
-    border-radius: 20px;
   }
 `;
 
@@ -98,7 +98,6 @@ const PassWordBox = styled(EmailBox)`
     position: absolute;
     right: 10px;
     bottom: 13px;
-    border-radius: 20px;
   }
 `;
 
@@ -122,8 +121,8 @@ const EmailInput = styled.input`
   ${mixin.borderSet("1", "solid", "rgb(214,214,215)")}
   width: 300px;
   height: 45px;
-  letter-spacing: 1px;
   padding: 10px;
+  border-radius: 5px;
 
   &:focus {
     ${mixin.borderSet("1", "solid", "rgb(165,165,165)")}

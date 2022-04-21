@@ -50,12 +50,12 @@ const Container = styled.div`
 `;
 
 const PercentInput = styled.input`
+  ${mixin.borderSet("1", "solid", "rgb(190, 190, 190)")}
+  ${mixin.fontSet("_", "20px", "bold")}
   width: 350px;
   height: 60px;
-  border: 1px solid rgb(190, 190, 190);
-  font-size: 20px;
-  font-weight: bold;
   padding-left: 260px;
+  border-radius: 5px;
 `;
 
 const PercentBox = styled.div`
