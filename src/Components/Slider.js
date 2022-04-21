@@ -2,27 +2,29 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { mixin } from "../Styles/mixin";
 
-const Cnt = [1, 25, 50, 75, 100];
+const Numbers = [1, 25, 50, 75, 100];
 const Slider = () => {
-  const [count, setCount] = useState(1);
+  const [number, setNumber] = useState(1);
 
   const percentChange = (e) => {
-    setCount(e.target.value);
+    setNumber(e.target.value);
   };
 
-  const onClickBtn = (item) => {
-    setCount(item);
+  const onClickBtn = (number) => {
+    console.log(number);
+    setNumber(number);
   };
 
   return (
     <>
       <Container>
-        <input value={count} readOnly />
+        <PercentInput value={number} readOnly />
         <PercentBox>%</PercentBox>
+        <ProgressBar type="range" onChange={percentChange} />
         <CountBtnWrapper>
-          {Cnt.map((item) => {
+          {Numbers.map((number) => {
             return (
-              <CountBtn onClick={() => onClickBtn(item)}>{item}%</CountBtn>
+              <CountBtn onClick={() => onClickBtn(number)}>{number}%</CountBtn>
             );
           })}
         </CountBtnWrapper>
@@ -39,16 +41,15 @@ const Container = styled.div`
   width: 400px;
   height: 200px;
   background-color: #eeeeee;
+`;
 
-  input {
-    width: 350px;
-    height: 60px;
-    border: 1px solid black;
-    padding-left: 260px;
-    border: 1px solid rgb(190, 190, 190);
-    font-size: 20px;
-    font-weight: bold;
-  }
+const PercentInput = styled.input`
+  width: 350px;
+  height: 60px;
+  border: 1px solid rgb(190, 190, 190);
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 260px;
 `;
 
 const PercentBox = styled.div`
@@ -62,10 +63,15 @@ const CountBtnWrapper = styled.div`
   width: 100%;
 `;
 
+const ProgressBar = styled.input`
+  width: 350px;
+  height: 20px;
+  margin-top: 20px;
+`;
+
 const CountBtn = styled.button`
   width: 40px;
   height: 20px;
-  margin-top: 40px;
   border-radius: 20px;
   background-color: rgb(240, 250, 250);
 
