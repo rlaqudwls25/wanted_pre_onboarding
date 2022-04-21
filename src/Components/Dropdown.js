@@ -8,20 +8,6 @@ const Dropdown = () => {
   const [inputValue, setInputValue] = useState(DropdownOptions[0].value);
   const [filteredData, setFilteredData] = useState(DropdownOptions);
   const [open, setOpen] = useState(false);
-  // const WrapperRef = useRef(null);
-
-  // useEffect(() => {
-  //   const clickOutside = (e) => {
-  //     // if (ref.current && !ref.current.contains(e.target)) {
-  //     setOpen(false);
-  //     // }/
-  //   };
-  //   window.document.addEventListener("mousedown", clickOutside);
-
-  //   return () => {
-  //     window.document.removeEventListener("mousedown", clickOutside);
-  //   };
-  // }, []);
 
   const onInputValueChange = (e) => {
     const searchWord = e.target.value;

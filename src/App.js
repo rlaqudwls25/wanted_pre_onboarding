@@ -8,13 +8,23 @@ import { mixin } from "./Styles/mixin";
 
 function App() {
   return (
-    <Wrapper>
-      <Toggle />
-      <Tab />
-      <Input />
-      <Slider />
-      <Dropdown />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Toggle />
+      </Wrapper>
+      <Wrapper>
+        <Tab />
+      </Wrapper>
+      <Wrapper>
+        <Input />
+      </Wrapper>
+      <Wrapper>
+        <Slider />
+      </Wrapper>
+      <Wrapper>
+        <Dropdown />
+      </Wrapper>
+    </>
   );
 }
 
