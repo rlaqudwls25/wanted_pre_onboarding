@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { mixin } from "../Styles/mixin";
+import { Numbers } from "../Config/config";
 
-const Numbers = [1, 25, 50, 75, 100];
 const Slider = () => {
   const [number, setNumber] = useState(1);
 
@@ -11,7 +11,6 @@ const Slider = () => {
   };
 
   const onClickBtn = (number) => {
-    console.log(number);
     setNumber(number);
   };
 
@@ -20,14 +19,21 @@ const Slider = () => {
       <Container>
         <PercentInput value={number} readOnly />
         <PercentBox>%</PercentBox>
-        <ProgressBar type="range" onChange={percentChange} />
-        <CountBtnWrapper>
-          {Numbers.map((number) => {
+        <ProgressBar
+          type="range"
+          onChange={percentChange}
+          value={number}
+          min="1"
+        />
+        <CountWrapper>
+          {Numbers.map((number, idx) => {
             return (
-              <CountBtn onClick={() => onClickBtn(number)}>{number}%</CountBtn>
+              <CountBtn key={idx} onClick={() => onClickBtn(number)}>
+                {number}%
+              </CountBtn>
             );
           })}
-        </CountBtnWrapper>
+        </CountWrapper>
       </Container>
     </>
   );
@@ -58,7 +64,7 @@ const PercentBox = styled.div`
   bottom: 121px;
 `;
 
-const CountBtnWrapper = styled.div`
+const CountWrapper = styled.div`
   ${mixin.flexSet("space-around", "center", "_")}
   width: 100%;
 `;
@@ -72,6 +78,7 @@ const ProgressBar = styled.input`
 const CountBtn = styled.button`
   width: 40px;
   height: 20px;
+  margin-top: 5px;
   border-radius: 20px;
   background-color: rgb(240, 250, 250);
 

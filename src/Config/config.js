@@ -35,3 +35,5 @@ export const DropdownOptions = [
     value: "White",
   },
 ];
+
+export const Numbers = [1, 25, 50, 75, 100];
