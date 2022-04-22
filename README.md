@@ -45,6 +45,10 @@ transform: translateX(                 // 각 조건에 맞는 값을 return 해
 문제를 처음 보자마자 어떻게 구현해야할지 감이 안잡혔지만 input type중에 range라는 아이 때문에 마지막까지 잘 해결할 수 있었다. <br />
 각 숫자 버튼들을 클릭 하였을 때 onClickBtn 함수를 통해 number의 값을 바꾸어주어 변화하는 ProgressBar의 input값, 퍼센트 숫자가 나오는 input값이 바뀌도록 구현하였다.
 
+<br />
+😠 **어려웠던 점**
+과제를 처음 봤을 때 progressBar를 어떻게 만들어야할지 착잡했지만, input에 type의 range를 알고나서 적용해보니 생각보다 쉬운 과제라고 생각했다!
+
 
 
 ## Input
