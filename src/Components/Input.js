@@ -56,9 +56,9 @@ const Input = () => {
             type={showPassword ? "text" : "password"}
             placeholder="Password"
           />
-          <div onClick={show}>
+          <Box onClick={show}>
             {showPassword ? <AiFillCheckCircle /> : <AiOutlineCheckCircle />}
-          </div>
+          </Box>
         </PassWordBox>
       </LoginWrapper>
     </>
@@ -100,6 +100,8 @@ const PassWordBox = styled(EmailBox)`
     bottom: 13px;
   }
 `;
+
+const Box = styled.div``;
 
 const EmailText = styled.span`
   ${mixin.fontSet("black", "13px", "normal")}
